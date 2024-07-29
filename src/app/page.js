@@ -54,7 +54,7 @@ export default function Home() {
 
             <div className="text-center">
               <span className="txt1">Não possui conta? </span>
-              <a className="txt2" href="#">
+              <a className="txt2" href="tela-de-cadastro-next.vercel.app">
                 Criar conta
               </a>
             </div>

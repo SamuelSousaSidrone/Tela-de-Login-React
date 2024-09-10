@@ -1,21 +1,23 @@
-"use client"
-
+"use client";
 import Link from "next/link";
-  import "./globals.css";
-  import React from "react";
-  import {useState} from "react";
-  //import jpIMG from "./assets/jp.svg";
+import "./globals.css";
+import React from "react";
+import { useState } from "react";
+//import jpIMG from "./assets/jp.svg";
 
 export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  return(
-  <div className="container">
+  return (
+    <div className="container">
       <div className="container-login">
         <div className="wrap-login">
           <form className="login-form">
-            <span className="login-form-title"> Bem vindo a tela de login </span>
+            <span className="login-form-title">
+              {" "}
+              Bem vindo a tela de Cadastro{" "}
+            </span>
 
             <div className="wrap-input">
               <input
@@ -23,7 +25,7 @@ export default function Home() {
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-              />
+              ></input>
               <span className="focus-input" data-placeholder="Username"></span>
             </div>
 
@@ -48,13 +50,13 @@ export default function Home() {
             </div>
 
             <div className="container-login-form-btn">
-              <button className="login-form-btn">Login</button>
+              <button className="login-form-btn">Cadastrar</button>
             </div>
 
             <div className="text-center">
-              <span className="txt1">Não possui conta? </span>
-              <Link className="txt2" href={"/cadastro"}>
-                Criar conta
+              <span className="txt1">Possui uma conta? </span>
+              <Link className="txt2" href={"/"} rel="noopener noreferrer">
+                Logar
               </Link>
             </div>
           </form>
@@ -62,5 +64,4 @@ export default function Home() {
       </div>
     </div>
   );
-  
 }
